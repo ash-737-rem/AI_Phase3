@@ -2,14 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Step 2: Upload CSV file
-file_path = 'your_file.csv'
+# Step 1: Upload CSV file
+file_path = '"C:\Users\Downloads\AEP_hourly.csv .zip"'
 data = pd.read_csv(file_path)
 
-# Step 4: Preprocess data (e.g., convert date column to datetime)
+# Step 2: Preprocess data 
 data['date_column'] = pd.to_datetime(data['date_column'])
 
-# Step 6: Create visualizations
+# Step 3: Create visualizations for reference
 plt.figure(figsize=(12, 6))
 sns.lineplot(x='date_column', y='energy_consumption', data=data)
 plt.title('Energy Consumption Over Time')
